@@ -6,3 +6,6 @@ networkx
 sentence-transformers
 gensim
 spacy
+qiskit
+qiskit-nature
+biopython
