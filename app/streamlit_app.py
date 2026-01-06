@@ -21,6 +21,8 @@ from src.inference import load_embeddings_and_model, search_papers_exact_boost
 from src.config_loader import load_config, load_texts
 from app.pages.graph_visualization import render_graph_page
 from app.pages.quantum_bio_explorer import run_bio_page
+from app.pages.chrono_explorer import run_chrono_page
+
 
 
 
@@ -97,8 +99,14 @@ def run_streamlit_app() -> None:
     st.sidebar.title(texts["app"]["sidebar_title"])
     page = st.sidebar.radio(
         texts["app"]["sidebar_navigation"],
-        [texts["sidebar"]["search_page"], texts["sidebar"]["graph_page"], texts["sidebar"]["bio_page"]]
+        [
+            texts["sidebar"]["search_page"], 
+            texts["sidebar"]["graph_page"], 
+            texts["sidebar"]["bio_page"],
+            texts["sidebar"]["chrono_page"]
+        ]
     )
+
 
 
     if page == texts["sidebar"]["search_page"]:
@@ -183,4 +191,8 @@ def run_streamlit_app() -> None:
     
     elif page == texts["sidebar"]["bio_page"]:
         run_bio_page()
+
+    elif page == texts["sidebar"]["chrono_page"]:
+        run_chrono_page()
+
 

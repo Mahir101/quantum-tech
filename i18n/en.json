@@ -36,7 +36,8 @@
     "select_page": "Select a Page",
     "search_page": "Search Papers",
     "graph_page": "Research Graph",
-    "bio_page": "Quantum Bio-Origami"
+    "bio_page": "Quantum Bio-Origami",
+    "chrono_page": "Chrono-Necro-Dimension"
   },
   "graph": {
     "title": "Research Graph",
